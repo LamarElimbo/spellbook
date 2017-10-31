@@ -1,0 +1,88 @@
+.maintext {
+    border:  .1em solid white;
+    border-radius: .2em;
+    margin: 0 1em 1em 0; 
+    box-sizing: border-box;
+    padding: 1em;
+    background-color: rgba(228,220,164, 0.89);
+    font-size: 1.25em;
+}
+
+#header {
+    width: 100%;
+    height: 55px;
+    background-color: #66033c;
+    border-bottom: 1px solid white;
+}
+
+#header a {
+    color: whitesmoke;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.maintext h2 {
+    color: #033b4c;
+}
+
+.maintext p {
+    color: #49402f;
+}
+
+center b {
+    color:#49402f;
+}
+
+h3 {
+    color:orangered;
+}
+	
+.bodystyle {
+    background: #c63c31;
+}
+
+.sample_website:hover {
+    color:#ff084a;
+}
+
+#siteInput {
+    position: relative;
+    top: 50px;
+    width:100%;
+}
+
+#submitButton {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    background: #574e51;
+    color: whitesmoke;
+    top: 60px;
+    text-align: center;
+    font-size: 18;
+}
+
+#divider {
+    position: relative;
+    top:25px;
+    height: 5px;
+    width: 100%;
+    border-top: 3px dotted gray;
+}
+
+.profile_container {
+    width:100%;
+    position: relative;
+}
+
+#title {
+    position: absolute;
+    text-align: right;
+    right: 30px;
+    top: 0px;
+}
+
+#description {
+    position: relative;
+    top: 20px;
+}

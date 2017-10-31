@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Site Sleuth</title>
+    <title>Digital Spellbook</title>
     <link rel="stylesheet" href="../static/app.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href='//fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
@@ -18,7 +18,6 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
-    <script src="../static/sample_website.js"></script>
 </head>
 
 <body class="bodystyle">
@@ -29,18 +28,23 @@
         </div>
     </div>
     <div class="container">
-        <p class="lead">Input your most craved desire and, just like magic, a spell suited for your needs might just heed your plead.</p>
+        <h3><center>Reveal your most craved desire and, just like magic, a spell suited for your needs might just heed your plead.</center></h3>
 
-        <div class="row">
-                
-            <div class="col-xs-11 col-md-11 maintext" style='position:absolute; right:7%;'>
-                <textarea type='textarea' id='siteInput' form='textform' name='website'></textarea>
-                <form action="{{ url_for('result')}}" id='textform' method='post'>
-		          <input type="submit" id='submitButton' form='textform'>
-                </form>
-            </div>
-        </div>
+        <textarea type='textarea' id='siteInput' form='textform' name='desire'></textarea>
+        <form action="{{ url_for('result')}}" id='textform' method='post'>
+          <input type="submit" id='submitButton' form='textform'>
+        </form>
     </div>
+    
+    <center style='position:relative; top:100px;'>
+        <h3>Not sure what you're looking for?  Perhaps you're looking for one of these:</h3>
+        <p>To find love?</p>
+        <p>To alter the past?</p>
+        <p>To change your appearance?</p>
+        <p>To summon someone?</p>
+        <p>To find good luck?</p>
+        <p>To find something lost?</p>
+    </center>
 </body>
 
 </html>
