@@ -8,7 +8,7 @@ def readCSV():
 
     spellSet = {}
 
-    m = codecs.open('../data/datasets/Spells.csv', "r",encoding='utf-8', errors='ignore')
+    m = codecs.open('./spellbook/Spells.csv', "r",encoding='utf-8', errors='ignore')
     reader = csv.DictReader(m)
 
     for row in reader:

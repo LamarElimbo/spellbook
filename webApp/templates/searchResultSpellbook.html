@@ -1,0 +1,32 @@
+{% extends "_skeleton_template.html" %}
+{% block title %}Lamar's Web Apps - Spellbook{% endblock %}
+{% block content %}
+    <br>
+
+    <div class="row">
+        <div class="col-xs-11 col-md-5 maintext">
+            <h3>If you desire more, then feel free to test your fate and give it another go.</h3>
+            <textarea type='textarea' id='siteInput' form='textform' name='desire'></textarea>
+            <form action="/spellbook_result" id='textform' method='post'>
+              <input type="submit" id='submitButton' form='textform'>
+            </form>
+            <br><br><br>
+        </div>
+
+        <div class="col-xs-11 col-md-5 maintext" style='position:absolute; right:7%;'>
+            {% if spellInfo == None %}
+                <center>Unfortunately, it seems that there are stonger forces than I preventing you from getting what you're looking for.</center>
+            {% else %}
+                {% for spell in spellInfo %}
+                    <div class="profile_container">
+                        <h1>{{spell[1]}}</h1>
+                        <p>{{spell[4]}}</p>
+                        <p><i>{{spell[3]}}</i></p>
+                        <p><b>{{spell[5]}}</b></p>
+                    </div>
+                    <div id='divider'></div><br><br>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

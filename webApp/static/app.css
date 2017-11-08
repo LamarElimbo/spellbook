@@ -10,15 +10,18 @@
 
 #header {
     width: 100%;
-    height: 55px;
+    height: 53px;
     background-color: #66033c;
-    border-bottom: 1px solid white;
 }
 
 #header a {
     color: whitesmoke;
     font-size: 22px;
     letter-spacing: 2px;
+}
+
+#header a:hover {
+    background-color:green;
 }
 
 .maintext h2 {
@@ -56,10 +59,12 @@ h3 {
     width: 100%;
     height: 50px;
     background: #574e51;
-    color: whitesmoke;
-    top: 60px;
+    color: white;
+    top:60px;
     text-align: center;
-    font-size: 18;
+    font-size: 18px;
+    border:  .1em solid white;
+    border-radius: 1em;
 }
 
 #divider {

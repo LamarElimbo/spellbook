@@ -1,50 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "_skeleton_template.html" %}
+{% block title %}Lamar's Web Apps - Spellbook{% endblock %}
+{% block content %}
+    <h1 class="page-header"><center>Warning!  This digital spellbook is not a toy for you to play with.</center></h1>
+    <h4><center>Head my warning and hear my plea</center></h4>
+    <h4><center>For using the spells in this collection might not come free</center></h4>
+    <br>
+    <h4><center>It was not too long in the distant past</center></h4>
+    <h4><center>When a powerful warlock a wicked spell did cast</center></h4>
+    <br>
+    <h4><center>So if you are not one of the few pure of heart</center></h4>
+    <h4><center>It is better now that you bid adieu and part</center></h4>
+    <br>
+    <h4><center>It is Lamar who decides whether you are deserving</center></h4>
+    <h4><center>And he can also tell if you're just posing</center></h4>
+    <br>
+    <h4><center>So before deciding to cast one of these spells</center></h4>
+    <h4><center>Consider whether or not you're prepared for an eternity in hell</center></h4>
+    <br>
+    <h4><center>...</center></h4>
+    <h4><center>And if you are pure of heart then feel free to just input your most craved desire and, just like magic, a spell suited for your needs might just heed your plead.</center></h4>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Digital Spellbook</title>
-    <link rel="stylesheet" href="../static/app.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href='//fonts.googleapis.com/css?family=Didact Gothic' rel='stylesheet'>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-        crossorigin="anonymous">
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
-</head>
+    <textarea type='textarea' id='siteInput' form='textform' name='desire'></textarea>
+    <form action="{{ url_for('spellbook_result')}}" id='textform' method='post'>
+      <input type="submit" id='submitButton' form='textform'>
+    </form>
 
-<body class="bodystyle">
-
-    <div id="header">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="search.html">Digital Book Of Shadows</a>
-        </div>
-    </div>
-    <div class="container">
-        <h3><center>Reveal your most craved desire and, just like magic, a spell suited for your needs might just heed your plead.</center></h3>
-
-        <textarea type='textarea' id='siteInput' form='textform' name='desire'></textarea>
-        <form action="{{ url_for('result')}}" id='textform' method='post'>
-          <input type="submit" id='submitButton' form='textform'>
-        </form>
-    </div>
-    
     <center style='position:relative; top:100px;'>
         <h3>Not sure what you're looking for?  Perhaps you're looking for one of these:</h3>
-        <p>To find love?</p>
-        <p>To alter the past?</p>
-        <p>To change your appearance?</p>
-        <p>To summon someone?</p>
-        <p>To find good luck?</p>
-        <p>To find something lost?</p>
+        <p>I want to find love.</p>
+        <p>I want to alter the past.</p>
+        <p>I want to change your appearance.</p>
+        <p>I want to summon someone.</p>
+        <p>I want good luck.</p>
+        <p>I want to find something lost.</p>
     </center>
-</body>
-
-</html>
+{% endblock %}
